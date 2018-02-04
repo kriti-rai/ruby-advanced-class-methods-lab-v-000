@@ -48,15 +48,10 @@ class Song
   data = filename.split(" - ")
   artist_name = data[0]
   song_info = data[1].split(".")
-  song_info.pop 
+  song_info.pop
   name = song_info[0]
   song = self.create_by_name(name)
   song.artist_name = artist_name
 end
 
-
-
-
-
-  end
 end
