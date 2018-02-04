@@ -45,16 +45,18 @@ class Song
   end
 
   def self.new_from_filename(filename)
-    data = filename.split(" - ")
-    @artist_name = data[0]
-    song_file = data[1].split(".") 
-    name = song_file.pop 
-    self.create_by_name(name)
-  end
+  data = filename.split(" - ")
+  artist_name = data[0]
+  song_info = data[1].split(".")
+  song_info.pop 
+  name = song_info[0]
+  song = self.create_by_name(name)
+  song.artist_name = artist_name
+end
 
-    
-    
-    
-    
+
+
+
+
   end
 end
