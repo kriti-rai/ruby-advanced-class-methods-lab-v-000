@@ -44,4 +44,6 @@ class Song
     self.all.sort_by! {|song| song.name}
   end
 
+  def artist_name
+  end
 end
