@@ -60,6 +60,6 @@ class Song
   end
 
   def self.destroy_all
-    @all = []
+    @@all = []
   end
 end
