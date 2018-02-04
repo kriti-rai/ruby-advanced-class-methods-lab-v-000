@@ -44,6 +44,17 @@ class Song
     self.all.sort_by! {|song| song.name}
   end
 
-  def artist_name
+  def self.new_from_filename(filename)
+    data = filename.split(" - ")
+    @artist_name = data[0]
+    song_file = data[1].split(".") 
+    name = song_file.pop 
+    self.create_by_name(name)
+  end
+
+    
+    
+    
+    
   end
 end
